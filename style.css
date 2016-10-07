@@ -314,3 +314,9 @@ div.panel.show {
 }
 
 /* AKORDEON MENU BITIR */
+
+result {
+	background-color: white;
+	color:#43d854
+	border: 1px solid black;
+}
