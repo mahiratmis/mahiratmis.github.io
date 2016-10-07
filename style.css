@@ -317,21 +317,23 @@ div.panel.show {
 
 .code {
 	float:left;
-	max-width: 200px;
+	max-width: 400px;
+	min-width: 200px;
 }
 
 .result {
 	background-color: white;
 	color:#43d854;
-	border: 2px solid black;
-	margin: 10px;
-	float:left;
-	max-width: 200px;
+	border: 1px solid black;
+	margin: 3px;
+	float: left;
+	max-width: 400px;
+	min-width: 200px;
 }
 
 .problem_tanimi {
 	background-color: white;
 	color:#black;
-	border: 2px solid black;
-	margin: 10px;
+	border: 1px solid black;
+	margin: 3px;
 }
