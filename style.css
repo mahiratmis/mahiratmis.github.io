@@ -264,7 +264,7 @@ footer {
   }
 }
 
-bos_satir{
+.bos_satir{
   margin:5px;
 }
 
@@ -315,14 +315,21 @@ div.panel.show {
 
 /* AKORDEON MENU BITIR */
 
-result {
+.code {
+	float:left;
+	max-width: 200px;
+}
+
+.result {
 	background-color: white;
 	color:#43d854;
 	border: 2px solid black;
 	margin: 10px;
+	float:left;
+	max-width: 200px;
 }
 
-problem_tanimi {
+.problem_tanimi {
 	background-color: white;
 	color:#black;
 	border: 2px solid black;
