@@ -1,6 +1,6 @@
 body {
   padding:50px;
-  font:14px Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:13px Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#222;
   font-weight:500;
 }
@@ -320,26 +320,35 @@ div.panel.show {
 	max-width: 400px;
 	min-width: 200px;
 	height:inherit;
+	padding:.2em;
+	overflow:auto;
+	width:auto;
+	border:solid #46bc99;
+	border-width:.1em .1em .1em .8em;
+	padding:.2em;	
 }
 
 .result {
 	background-color: white;
-	color:#43d854;
-	border: solid gray;
-	margin: 3px;
-	float: left;
+	border: solid #39c;
+	margin-left:5px;
+	float: right;
 	max-width: 400px;
 	min-width: 200px;
 	border-width:.1em .1em .1em .8em;
-	padding:.2em .6em;
+	padding:.2em;
 	height:inherit;
 }
 
 .problem_tanimi {
 	background-color: white;
 	color:#black;
-	border: solid gray;
-	margin: 3px;
+	border: solid #990033;
+	margin: 4px 0px;
 	border-width:.1em .1em .1em .8em;
-	padding:.2em .6em;
+	padding:.2em;
+}
+
+.problem_tanimi p{
+	color:black;
 }
