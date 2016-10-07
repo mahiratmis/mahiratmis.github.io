@@ -324,16 +324,20 @@ div.panel.show {
 .result {
 	background-color: white;
 	color:#43d854;
-	border: 1px solid black;
+	border: solid gray;
 	margin: 3px;
 	float: left;
 	max-width: 400px;
 	min-width: 200px;
+	border-width:.1em .1em .1em .8em;
+	padding:.2em .6em;
 }
 
 .problem_tanimi {
 	background-color: white;
 	color:#black;
-	border: 1px solid black;
+	border: solid gray;
 	margin: 3px;
+	border-width:.1em .1em .1em .8em;
+	padding:.2em .6em;
 }
