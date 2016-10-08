@@ -274,7 +274,7 @@ button.accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 8px;
     width: 100%;
     border: none;
     text-align: left;
@@ -315,14 +315,15 @@ div.panel.show {
 
 /* AKORDEON MENU BITIR */
 
+.ornekler{
+	clear:both;
+}
+
 .code {
 	float:left;
-	max-width: 400px;
-	min-width: 200px;
-	height:inherit;
+	width: 47%;
 	padding:.2em;
 	overflow:auto;
-	width:auto;
 	border:solid #46bc99;
 	border-width:.1em .1em .1em .8em;
 	padding:.2em;	
@@ -332,9 +333,8 @@ div.panel.show {
 	background-color: white;
 	border: solid #39c;
 	margin-left:5px;
-	float: left;
-	max-width: 400px;
-	min-width: 200px;
+	float: right;
+	width: 50%;
 	border-width:.1em .1em .1em .8em;
 	padding:.2em;
 	height:inherit;
@@ -352,3 +352,14 @@ div.panel.show {
 .problem_tanimi p{
 	color:black;
 }
+
+.left{
+	width:20%;
+	float:left;
+}
+
+.right{
+	width:80%;
+	float:right;
+}
+
