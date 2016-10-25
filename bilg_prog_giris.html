@@ -80,7 +80,7 @@
 					</pre> 
 				</div>
 			</div>
-			<button class="accordion">2.Özel Karakterler</button>
+			<button class="accordion">2.Özel Karakterler \n, \a, \t, \&quot; </button>
 			<div class="panel">
 				<div class="problem_tanimi">	
 					<h3> Problem Tanımı </h3>				
@@ -162,7 +162,7 @@ Merkez\YALOVA
     dogum_tarihi<span style="color: #666666">=</span> <span style="color: #666666">1987</span>;
     tc_no<span style="color: #666666">=19123454209</span>;
     boy<span style="color: #666666">=1.83f</span>;
-    bakiye<span style="color: #666666">=1000000.45</span>d;
+    bakiye<span style="color: #666666">=1000000.45</span>;
 }
 </pre></div>
 
@@ -175,7 +175,139 @@ Merkez\YALOVA
 				</div>
 			</div> 			
 			
-<button class="accordion">4.Format Belirleyicileri</button>
+<button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Farklı Veri Türleri ve Değer Aralıklarını Ekrana Yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #408080; font-style: italic">/* Bir otomobile ait bilgilerin saklandigi</span>
+<span style="color: #408080; font-style: italic">   değişken değerlerini ekrana yazma.</span>
+<span style="color: #408080; font-style: italic">*/</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>(){
+
+    <span style="color: #B00040">char</span> abs_varmi <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;E&#39;</span>;
+    <span style="color: #B00040">short</span>  yil<span style="color: #666666">=</span> <span style="color: #666666">2016</span>;
+    <span style="color: #B00040">short</span> max_surat<span style="color: #666666">=250</span>; <span style="color: #408080; font-style: italic">// km/saat</span>
+    <span style="color: #B00040">int</span> kilometre <span style="color: #666666">=</span> <span style="color: #666666">999998</span>;
+    <span style="color: #B00040">char</span><span style="color: #666666">*</span> marka <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Audi&quot;</span>;
+    <span style="color: #B00040">char</span><span style="color: #666666">*</span> model <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;RS 7&quot;</span>;
+    <span style="color: #B00040">char</span><span style="color: #666666">*</span> nesil <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;RS 7 Sportback (4G)&quot;</span>;
+    <span style="color: #B00040">float</span> hizlanma <span style="color: #666666">=</span> <span style="color: #666666">3.7f</span>; <span style="color: #408080; font-style: italic">//saniye</span>
+    <span style="color: #B00040">float</span> agirlik <span style="color: #666666">=1930.02f</span>; <span style="color: #408080; font-style: italic">//kg</span>
+    <span style="color: #B00040">double</span> fiyat <span style="color: #666666">=7e11</span>; <span style="color: #408080; font-style: italic">// 7x10^11 = 700 milyar</span>
+
+    printf(<span style="color: #BA2121">&quot;== Arabamin Ozellikleri==</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+    printf(<span style="color: #BA2121">&quot;Marka: %s </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, marka);
+    printf(<span style="color: #BA2121">&quot;Model: %s </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, model);
+    printf(<span style="color: #BA2121">&quot;Nesil: %s </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, nesil);
+    printf(<span style="color: #BA2121">&quot;Yil: %d </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, yil);
+    printf(<span style="color: #BA2121">&quot;Km :%d </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,kilometre);
+    printf(<span style="color: #BA2121">&quot;ABS: %c </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, abs_varmi);
+    printf(<span style="color: #BA2121">&quot;Hizlanma: %1.1f saniye </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,hizlanma);
+    printf(<span style="color: #BA2121">&quot;Agirlik: %4.2f kg.</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,agirlik);
+    printf(<span style="color: #BA2121">&quot;Fiyat: %10.2lf TL</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,fiyat);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+== Arabamin Ozellikleri==
+Marka: Audi
+Model: RS 7
+Nesil: RS 7 Sportback (4G)
+Yil: 2016
+Km :999998
+ABS: E
+Hizlanma: 3.7 saniye
+Agirlik: 1930.02 kg.
+Fiyat: 700000000000.00 TL
+					</pre> 
+				</div>
+			</div>    
+
+<button class="accordion">5.Veri Türleri Bellekte Kapladıkları Alan ve Değer Aralıkları</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Farklı Veri Türlerinin bellekte kaç Byte yer kapladığını ve Değer Aralıklarını Ekrana Yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;limits.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;float.h&gt;</span>
+
+<span style="color: #408080; font-style: italic">/* Veri türlerinin bellekte kaç byte yer kapladıklarını</span>
+<span style="color: #408080; font-style: italic">   Alacakları minmum ve maximum değerleri ekrana yazdırma.</span>
+<span style="color: #408080; font-style: italic">*/</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #408080; font-style: italic">// turlerin bellekte kac byte</span>
+  <span style="color: #408080; font-style: italic">// yer kapladiklarini hesapla</span>
+  <span style="color: #B00040">long</span> byt_chr  <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">char</span>);
+  <span style="color: #B00040">long</span> byt_shrt <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">short</span>);
+  <span style="color: #B00040">long</span> byt_int  <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">int</span>);
+  <span style="color: #B00040">long</span> byt_lng  <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">long</span>);
+  <span style="color: #B00040">long</span> byt_flt  <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">float</span>);
+  <span style="color: #B00040">long</span> byt_dbl  <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">sizeof</span>(<span style="color: #B00040">double</span>);
+
+  printf(<span style="color: #BA2121">&quot;  Veri Turu       Kapladigi Alan(Byte)</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+  printf(<span style="color: #BA2121">&quot;  ---------       --------------------</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;char&quot;</span>, byt_chr);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;short&quot;</span>, byt_shrt);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;int&quot;</span>, byt_int);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;long&quot;</span>, byt_lng);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;float&quot;</span>, byt_flt);
+  printf(<span style="color: #BA2121">&quot;%9s %18ld </span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;double&quot;</span>, byt_dbl);
+  printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+  printf(<span style="color: #BA2121">&quot;  Veri Turu       Min Deger       Max Deger</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+  printf(<span style="color: #BA2121">&quot;  ---------       ---------       ---------</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+  printf(<span style="color: #BA2121">&quot;%11s %15d %15d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;char&quot;</span>, CHAR_MIN, CHAR_MAX);
+  printf(<span style="color: #BA2121">&quot;%11s %15d %15d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;short&quot;</span>, SHRT_MIN, SHRT_MAX);
+  printf(<span style="color: #BA2121">&quot;%11s %15d %15d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;int&quot;</span>, INT_MIN, INT_MAX);
+  printf(<span style="color: #BA2121">&quot;%11s %15ld %15ld</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;long&quot;</span>, LONG_MIN, LONG_MAX);
+  printf(<span style="color: #BA2121">&quot;%11s %15e %15e</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;float&quot;</span>, FLT_MIN , FLT_MAX);
+  printf(<span style="color: #BA2121">&quot;%11s %15e %15e</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,<span style="color: #BA2121">&quot;double&quot;</span>, DBL_MIN, DBL_MAX);
+
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+  Veri Turu       Kapladigi Alan(Byte)
+  ---------       --------------------
+     char                  1
+    short                  2
+      int                  4
+     long                  4
+    float                  4
+   double                  8
+
+  Veri Turu       Min Deger       Max Deger
+  ---------       ---------       ---------
+       char            -128             127
+      short          -32768           32767
+        int     -2147483648      2147483647
+       long     -2147483648      2147483647
+      float   1.175494e-038   3.402823e+038
+     double   2.225074e-308   1.797693e+308
+					</pre> 
+				</div>
+			</div>  			
+
+<!-- 
+<button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
 			<div class="panel">
 				<div class="problem_tanimi">	
 					<h3> Problem Tanımı </h3>				
@@ -191,11 +323,11 @@ Merkez\YALOVA
 
 					</pre> 
 				</div>
-			</div>      
+			</div>  
+			-->			
 
 		
 </div>		
-
 </div>
 
 	<div id="ayak">
