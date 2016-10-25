@@ -310,7 +310,7 @@ div.panel {
 
 div.panel.show {
     opacity: 1;
-    max-height: 900px;  
+    max-height: 2000px;  
 }
 
 /* AKORDEON MENU BITIR */
@@ -320,21 +320,16 @@ div.panel.show {
 }
 
 .code {
-	float:left;
-	width: 60%;
 	padding:.2em;
 	overflow:auto;
 	border:solid #46bc99;
 	border-width:.1em .1em .1em .8em;
-	padding:.2em;	
 }
 
 .result {
+	margin-top:2px;
 	background-color: white;
 	border: solid #39c;
-	margin-left:5px;
-	float: right;
-	width: 35%;
 	border-width:.1em .1em .1em .8em;
 	padding:.2em;
 	height:inherit;
