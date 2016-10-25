@@ -321,7 +321,7 @@ div.panel.show {
 
 .code {
 	float:left;
-	width: 45%;
+	width: 60%;
 	padding:.2em;
 	overflow:auto;
 	border:solid #46bc99;
@@ -334,7 +334,7 @@ div.panel.show {
 	border: solid #39c;
 	margin-left:5px;
 	float: right;
-	width: 50%;
+	width: 35%;
 	border-width:.1em .1em .1em .8em;
 	padding:.2em;
 	height:inherit;
