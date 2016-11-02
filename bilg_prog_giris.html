@@ -305,8 +305,109 @@ Fiyat: 700000000000.00 TL
      double   2.225074e-308   1.797693e+308
 					</pre> 
 				</div>
+			</div>  
+
+
+<button class="accordion">6. #define kullanarak çember alanı ve çevresini bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Yarıçapı bilinen çemberin alanı ve çevresini bulma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #BC7A00">#define PI 3.14</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> yaricap <span style="color: #666666">=</span> <span style="color: #666666">5</span>;
+   <span style="color: #B00040">double</span> alan <span style="color: #666666">=</span> PI <span style="color: #666666">*</span> yaricap <span style="color: #666666">*</span> yaricap ;
+   <span style="color: #B00040">double</span> cevre <span style="color: #666666">=2*</span>PI<span style="color: #666666">*</span>yaricap;
+   printf(<span style="color: #BA2121">&quot;Alan:%lf Cevre:%lf&quot;</span>,alan,cevre);
+   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Alan:78.500000 Cevre:31.400000
+					</pre> 
+				</div>
+			</div> 			
+
+<button class="accordion">7. #define kullanarak ideal gaz kanunu formülünü gerçekleştirme </button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Hacmi, mol sayısı ve sıcaklığı verilen gazın basıncını bulma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #BC7A00">#define R 8.2e-2f</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">float</span> hacim <span style="color: #666666">=10.2f</span>;
+   <span style="color: #B00040">float</span> mol_sayisi <span style="color: #666666">=</span> <span style="color: #666666">1.4f</span>;
+   <span style="color: #B00040">long</span> sicaklik <span style="color: #666666">=80000000</span>;
+   <span style="color: #B00040">float</span> basinc <span style="color: #666666">=</span> mol_sayisi<span style="color: #666666">*</span>sicaklik<span style="color: #666666">*</span>R<span style="color: #666666">/</span>hacim;
+   printf(<span style="color: #BA2121">&quot;Basinc: %f&quot;</span>,basinc);
+   <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Basinc: 900392.187500
+					</pre> 
+				</div>
 			</div>  			
 
+<button class="accordion">8. scanf ile konsoldan girdi okuma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Farklı Veri Türleri ve Değer Aralıklarını Ekrana Yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">char</span> dev_zor_varmi;
+  <span style="color: #B00040">int</span> ogr_no;
+  printf(<span style="color: #BA2121">&quot;Devam Zorunlulugu var mi? [E,H]&quot;</span>);
+  scanf(<span style="color: #BA2121">&quot; %c&quot;</span>,<span style="color: #666666">&amp;</span>dev_zor_varmi);
+  printf(<span style="color: #BA2121">&quot;girdiginiz karakter %c&quot;</span>,dev_zor_varmi);
+
+  printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Ogrenci numaranizi giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>ogr_no);
+  printf(<span style="color: #BA2121">&quot;Ogrenci numaraniz %d dir&quot;</span>, ogr_no);
+
+  <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Devam Zorunlulugu var mi? [E,H]E
+girdiginiz karakter E
+Ogrenci numaranizi giriniz 2009878907
+Ogrenci numaraniz 2009878907 dir
+					</pre> 
+				</div>
+			</div>  			
+			
 <!-- 
 <button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
 			<div class="panel">
