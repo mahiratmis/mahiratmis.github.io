@@ -407,7 +407,232 @@ Ogrenci numaraniz 2009878907 dir
 					</pre> 
 				</div>
 			</div>  			
+	
+<button class="accordion">9. math kütüphanesindeki abs fonksiyonunun kullanımı</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Sayı doğrusu üzerindeki iki nokta arasındaki uzaklık </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;math.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> nokta1;
+   <span style="color: #B00040">int</span> nokta2;
+   <span style="color: #B00040">int</span> uzaklik;
+   printf(<span style="color: #BA2121">&quot;2 nokta degeri giriniz &quot;</span>);
+   scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>nokta1,<span style="color: #666666">&amp;</span>nokta2);
+   uzaklik <span style="color: #666666">=</span> abs(nokta1<span style="color: #666666">-</span>nokta2);
+   printf(<span style="color: #BA2121">&quot;Bu 2 nokta arasi uzaklik %d dir&quot;</span>,uzaklik);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+2 nokta degeri giriniz 5 23
+Bu 2 nokta arasi uzaklik 18 dir
+					</pre> 
+				</div>
+			</div>  
+	
+<button class="accordion">10. Koninin hacmini bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Yüksekliği ve yarıçapı verilen koninin hacmini bulma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#define PI 3.14f</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> yaricap, yukseklik;
+  <span style="color: #B00040">float</span> hacim;
+  printf(<span style="color: #BA2121">&quot;Yaricap ve yukseklik degerlerini giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>yaricap,<span style="color: #666666">&amp;</span>yukseklik);
+  hacim <span style="color: #666666">=</span> <span style="color: #666666">1.0f/3*</span>PI<span style="color: #666666">*</span>yaricap<span style="color: #666666">*</span>yaricap<span style="color: #666666">*</span>yukseklik;
+  printf(<span style="color: #BA2121">&quot;Koni hacmi %f&quot;</span>,hacim);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Yaricap ve yukseklik degerlerini giriniz 3 9
+Koni hacmi 84.780006
+					</pre> 
+				</div>
+			</div> 	
+
+<button class="accordion">11.Üçgende hipotenüs hesabı</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Dik kenarları verilen üçgenin hipotenüs değerini hesaplama </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;math.h&gt;</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> a,b;
+  <span style="color: #B00040">double</span> hip;
+  printf(<span style="color: #BA2121">&quot;Dik kenar degerlerini giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>a,<span style="color: #666666">&amp;</span>b);
+  hip<span style="color: #666666">=</span>sqrt(a<span style="color: #666666">*</span>a<span style="color: #666666">+</span>b<span style="color: #666666">*</span>b);
+  printf(<span style="color: #BA2121">&quot;Hipotenus %lf&quot;</span>,hip);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Dik kenar degerlerini giriniz 6 8
+Hipotenus 10.000000
+					</pre> 
+				</div>
+			</div>  			
+	
+<button class="accordion">12.Kuruştan TL Hesabı</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kuruş olarak değeri girilen paranın TL ve Kuruş cinsinden değeri </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> kullanici_kurus, turk_lirasi;
+  <span style="color: #B00040">int</span> kalan_kurus;
+  printf(<span style="color: #BA2121">&quot;Kac kurusunuz var &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>kullanici_kurus);
+
+  turk_lirasi <span style="color: #666666">=</span> kullanici_kurus <span style="color: #666666">/</span> <span style="color: #666666">100</span>;
+  kalan_kurus <span style="color: #666666">=</span> kullanici_kurus <span style="color: #666666">-</span> turk_lirasi<span style="color: #666666">*100</span>;
+
+  printf(<span style="color: #BA2121">&quot;%d TL %d Kurus&quot;</span>,turk_lirasi,kalan_kurus);
+}
+</pre></div>
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Kac kurusunuz var 1568
+15 TL 68 Kurus
+					</pre> 
+				</div>
+			</div> 	
+
+<button class="accordion">13.İnçten Santimetreye Çeviri</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> İnç birimindeki bir sayıyı cm birimine dönüştürme </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">float</span> inc_degeri, cm_degeri;
+  <span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">float</span> INC_KATSAYISI<span style="color: #666666">=</span> <span style="color: #666666">2.54f</span>;
+  printf(<span style="color: #BA2121">&quot;Inc degerini giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%f&quot;</span>,<span style="color: #666666">&amp;</span>inc_degeri);
+  cm_degeri <span style="color: #666666">=</span> INC_KATSAYISI<span style="color: #666666">*</span>inc_degeri;
+  printf(<span style="color: #BA2121">&quot;%f inch %f cm&#39;dir &quot;</span>,inc_degeri,cm_degeri);
+
+}
+</pre></div>
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Inc degerini giriniz 24.2
+24.200001 inch 61.468002 cm'dir
+					</pre> 
+				</div>
+			</div>  
 			
+<button class="accordion">14.Kullanıcıdan Email adresini alma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kullanıcıdan alınan bir email adresini ekrana yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">char</span> email_adresi[<span style="color: #666666">18</span>];
+  printf(<span style="color: #BA2121">&quot;Email adresinizi giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%s&quot;</span>,email_adresi);
+  printf(<span style="color: #BA2121">&quot;Girdiginiz email adresi %s&quot;</span>,email_adresi);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Email adresinizi giriniz mahiratmis@gmail.com
+Girdiginiz email adresi mahiratmis@gmail.com
+					</pre> 
+				</div>
+			</div>  
+
+			<button class="accordion">15.Not Ortalaması Hesaplama</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Öğrenci adı, soyadı, vize notu alınıp ortalamanın hesaplanması.
+         			Ortalama vize notunun %60'ı ile final notunun %40'ının toplamı alınarak hesaplanır.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+    <span style="color: #B00040">int</span> vize,final;
+    <span style="color: #B00040">char</span> ad[<span style="color: #666666">20</span>] , soyad[<span style="color: #666666">30</span>];
+    printf(<span style="color: #BA2121">&quot;Ogrenci adi ve soyadini giriniz: &quot;</span>);
+    scanf(<span style="color: #BA2121">&quot;%s %s&quot;</span>,ad,soyad);
+    printf(<span style="color: #BA2121">&quot;Vize final notlarini giriniz: &quot;</span>);
+    scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>vize,<span style="color: #666666">&amp;</span>final);
+    printf(<span style="color: #BA2121">&quot;Ogrenci adi soyadi : %s %s</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>, ad, soyad);
+    printf(<span style="color: #BA2121">&quot;Not Ortalamasi: %.2f</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span> ,vize<span style="color: #666666">*0.3f</span> <span style="color: #666666">+</span> final<span style="color: #666666">*0.7f</span>);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Ogrenci adi ve soyadini giriniz: mahir atmis
+Vize final notlarini giriniz: 90 95
+Ogrenci adi soyadi : mahir atmis
+Not Ortalamasi: 93.50
+					</pre> 
+				</div>
+			</div>  
+			
+	
 <!-- 
 <button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
 			<div class="panel">
