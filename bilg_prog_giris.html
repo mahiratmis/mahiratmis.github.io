@@ -631,8 +631,123 @@ Not Ortalamasi: 93.50
 					</pre> 
 				</div>
 			</div>  
+
+<button class="accordion">16. Sayı tek mi çift mi</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kullanıcıdan alınan bir sayı tek ise ekrana 1 çift ise 0 yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> sayi;
+  <span style="color: #B00040">short</span> sonuc;
+  printf(<span style="color: #BA2121">&quot;Bir sayi giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>sayi);
+
+  sonuc <span style="color: #666666">=</span> sayi <span style="color: #666666">%</span> <span style="color: #666666">2</span>;
+  printf(<span style="color: #BA2121">&quot;%d&quot;</span>,sonuc);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Bir sayi giriniz 5
+1
+					</pre> 
+				</div>
+			</div> 
+
+<button class="accordion">17. Tek çift kontrolü if kullanılarak</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kullanıcıdan alınan bir sayı tek ise ekrana Tek sayi girdiniz, çiftse Cift sayi girdiniz yazdırma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> sayi;
+  <span style="color: #B00040">short</span> sonuc;
+  printf(<span style="color: #BA2121">&quot;Bir sayi giriniz: &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>sayi);
+
+  sonuc <span style="color: #666666">=</span> sayi <span style="color: #666666">%</span> <span style="color: #666666">2</span>;
+  <span style="color: #008000; font-weight: bold">if</span>(sonuc <span style="color: #666666">==</span> <span style="color: #666666">1</span>)
+  {
+      printf(<span style="color: #BA2121">&quot;Tek sayi girdiniz&quot;</span>);
+  }
+  <span style="color: #008000; font-weight: bold">else</span>
+  {
+      printf(<span style="color: #BA2121">&quot;Cift sayi girdiniz&quot;</span>);
+  }
+  
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Bir sayi giriniz: 7
+Tek sayi girdiniz
+					</pre> 
+				</div>
+			</div> 			
 			
-	
+<button class="accordion">18. Evlilik durumu</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kullanıcıya evli olup olmadığı sorulur. Evliyse kaç çocuğu olduğuu soran, değilse Kısmetse olur yazdırma.
+              Kullanıcı E,e,H,h karakterlerinden birini girerek cevap vermeli aksi halde geçersiz karakter girdiniz hatası vermeli.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">char</span> durum;
+  printf(<span style="color: #BA2121">&quot;Evli misiniz? (E,e,H,h)&quot;</span>);
+  scanf(<span style="color: #BA2121">&quot; %c&quot;</span>,<span style="color: #666666">&amp;</span>durum);
+
+  <span style="color: #008000; font-weight: bold">if</span>(durum <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;E&#39;</span> <span style="color: #666666">||</span> durum<span style="color: #666666">==</span><span style="color: #BA2121">&#39;e&#39;</span>)
+  {
+    printf(<span style="color: #BA2121">&quot;Kac cocugunuz var?&quot;</span>);
+  } 
+  <span style="color: #008000; font-weight: bold">else</span> <span style="color: #008000; font-weight: bold">if</span> (durum <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;H&#39;</span> <span style="color: #666666">||</span> durum<span style="color: #666666">==</span><span style="color: #BA2121">&#39;h&#39;</span>)
+  {
+    printf(<span style="color: #BA2121">&quot;Darisi basiniza&quot;</span>);
+  } 
+  <span style="color: #008000; font-weight: bold">else</span>
+  {
+    printf(<span style="color: #BA2121">&quot;Gecersiz bir karakter girdiniz&quot;</span>);
+  }
+}
+</pre></div>
+
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Evli misiniz? (E,e,H,h)e
+Kac cocuguvuz var?
+					</pre> 
+				</div>
+			</div>  
+
+			
 <!-- 
 <button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
 			<div class="panel">
@@ -658,7 +773,7 @@ Not Ortalamasi: 93.50
 </div>
 
 	<div id="ayak">
-	<h2> Son Güncellenme Tarihi : 3 Kasım 2016 Saat 16:44 </h2>
+	<h2> Son Güncellenme Tarihi : 10 Kasım 2016 Saat 13:30 </h2>
 	</div>
 
 	<!-- Akordeon Menu -->
