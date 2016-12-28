@@ -747,9 +747,615 @@ Kac cocuguvuz var?
 				</div>
 			</div>  
 
+<button class="accordion">19. Büyük Sayı Bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Girilen iki reel sayının büyüklük küçüklük ve eşitlik durumlarını ekrana yazan program. </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">float</span> sayi1, sayi2;
+  printf(<span style="color: #BA2121">&quot;Iki reel sayi giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%f%f&quot;</span>,<span style="color: #666666">&amp;</span>sayi1,<span style="color: #666666">&amp;</span>sayi2);
+  <span style="color: #008000; font-weight: bold">if</span>(sayi1 <span style="color: #666666">&gt;</span> sayi2)
+    printf(<span style="color: #BA2121">&quot;Buyuk sayi %f &#39;dir&quot;</span>,sayi1);
+  <span style="color: #008000; font-weight: bold">else</span> <span style="color: #008000; font-weight: bold">if</span> (sayi2 <span style="color: #666666">&gt;</span> sayi1)
+    printf(<span style="color: #BA2121">&quot;Buyuk sayi %f &#39;dir&quot;</span>,sayi2);
+  <span style="color: #008000; font-weight: bold">else</span>
+     printf(<span style="color: #BA2121">&quot;Sayilar birbirine esittir&quot;</span>);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Iki reel sayi giriniz 5.0 4.7
+Buyuk sayi 5.000000 'dir
+					</pre> 
+				</div>
+			</div>  			
+
+<button class="accordion">20. Alışverişte Öğrenci İndirimi</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Kullanıcıya öğrenci olup olmadığı ve alışveriş tutarı sorulur. 
+					Eğer öğrenci ise ve tutar 40 tl den fazla ise %5 indirim uygulanıp. 
+					İndirimli tutar virgülden sonra 2 basamak olacak şekilde ekrana yazdırılır.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">char</span> ogrenci_Mi;
+   <span style="color: #B00040">float</span> tutar;
+
+   printf(<span style="color: #BA2121">&quot;Ogrenci misiniz? [E,e,H,h] &quot;</span>);
+   scanf(<span style="color: #BA2121">&quot; %c&quot;</span>,<span style="color: #666666">&amp;</span>ogrenci_Mi);
+   printf(<span style="color: #BA2121">&quot;Alisveris tutarini giriniz &quot;</span>);
+   scanf(<span style="color: #BA2121">&quot;%f&quot;</span>,<span style="color: #666666">&amp;</span>tutar);
+
+   <span style="color: #008000; font-weight: bold">if</span>(tutar<span style="color: #666666">&gt;40</span> <span style="color: #666666">&amp;&amp;</span> (ogrenci_Mi<span style="color: #666666">==</span><span style="color: #BA2121">&#39;E&#39;</span> <span style="color: #666666">||</span> ogrenci_Mi<span style="color: #666666">==</span><span style="color: #BA2121">&#39;e&#39;</span>))
+    tutar <span style="color: #666666">=</span> tutar <span style="color: #666666">-</span> tutar<span style="color: #666666">*0.05f</span>;
+
+   printf(<span style="color: #BA2121">&quot;Indirimli alisveris tutariniz %.2f&quot;</span>,tutar);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Ogrenci misiniz? [E,e,H,h] E
+Alisveris tutarini giriniz 200
+Indirimli alisveris tutariniz 190.00
+					</pre> 
+				</div>
+			</div>  	
+			
+<button class="accordion">21. Zar yüzeyine gelen sayılar</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Hilesiz bir zar 3 defa atılıyor. 
+					Atılan zarların kaç tanesinin yüzeyindeki değerlerin 4 ten büyük olduğunu bulan program.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;stdlib.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> zar_degeri, buyuk_sayisi<span style="color: #666666">=0</span>;
+  srand(time(<span style="color: #008000">NULL</span>));
+  <span style="color: #408080; font-style: italic">//1. zari at</span>
+  zar_degeri <span style="color: #666666">=</span> (rand()<span style="color: #666666">%6</span> ) <span style="color: #666666">+1</span>;
+  printf(<span style="color: #BA2121">&quot;1. zar degeri %d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,zar_degeri);
+
+  <span style="color: #008000; font-weight: bold">if</span>(zar_degeri <span style="color: #666666">&gt;=</span> <span style="color: #666666">5</span>)
+    buyuk_sayisi<span style="color: #666666">++</span>;
+
+  <span style="color: #408080; font-style: italic">//2. zari at</span>
+  zar_degeri <span style="color: #666666">=</span> (rand()<span style="color: #666666">%6</span> ) <span style="color: #666666">+1</span>;
+  printf(<span style="color: #BA2121">&quot;2. zar degeri %d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,zar_degeri);
+  <span style="color: #008000; font-weight: bold">if</span>(zar_degeri <span style="color: #666666">&gt;=</span> <span style="color: #666666">5</span>)
+    buyuk_sayisi<span style="color: #666666">++</span>;
+
+  <span style="color: #408080; font-style: italic">//3. zari at</span>
+  zar_degeri <span style="color: #666666">=</span> (rand()<span style="color: #666666">%6</span> ) <span style="color: #666666">+1</span>;
+  printf(<span style="color: #BA2121">&quot;3. zar degeri %d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,zar_degeri);
+  <span style="color: #008000; font-weight: bold">if</span>(zar_degeri <span style="color: #666666">&gt;=</span> <span style="color: #666666">5</span>)
+    buyuk_sayisi<span style="color: #666666">++</span>;
+
+  printf(<span style="color: #BA2121">&quot;%d tane 4 ten&quot;</span>,buyuk_sayisi);
+  printf(<span style="color: #BA2121">&quot;  buyuk zar atildi.&quot;</span>);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+1. zar degeri 5
+2. zar degeri 5
+3. zar degeri 1
+2 tane 4 ten  buyuk zar atildi.
+					</pre> 
+				</div>
+			</div>  
+
+<button class="accordion">22.Üç basamaklı sayı rakamları toplamı.</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Girilen üç basamaklı bir sayının rakamları toplamını ekrana yazan program. 
+					Eğer sayı 3 basamaklı değil ise kullanıcıya hata mesajı verip çıksın. </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> sayi, yuzler, onlar, birler ;
+  printf(<span style="color: #BA2121">&quot;3 basamakli sayi giriniz: &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>sayi);
+
+  <span style="color: #008000; font-weight: bold">if</span>(sayi<span style="color: #666666">&lt;100</span> <span style="color: #666666">||</span> sayi<span style="color: #666666">&gt;999</span>)
+  {
+     printf(<span style="color: #BA2121">&quot;Gecersiz sayi girdiniz&quot;</span>);
+  }
+  <span style="color: #008000; font-weight: bold">else</span>
+  {
+      yuzler <span style="color: #666666">=</span> sayi <span style="color: #666666">/</span> <span style="color: #666666">100</span> ;
+      onlar  <span style="color: #666666">=</span> (sayi <span style="color: #666666">-</span> yuzler<span style="color: #666666">*100</span>)<span style="color: #666666">/10</span>;
+      birler <span style="color: #666666">=</span> (sayi <span style="color: #666666">-</span> yuzler<span style="color: #666666">*100</span>)<span style="color: #666666">%10</span>;
+      printf(<span style="color: #BA2121">&quot;Rakamlar toplami %d&quot;</span>,yuzler<span style="color: #666666">+</span>onlar<span style="color: #666666">+</span>birler);
+  }
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+3 basamakli sayi giriniz: 786
+Rakamlar toplami 21
+					</pre> 
+				</div>
+			</div> 
+
+<button class="accordion">23. Öğrencinin istediği harf notu için alması gereken final puanı</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Öğrenciden birinci ve ikinci vize notları istenir. Sonra da geçmek istediği harf notu sorulur.<br/> 
+					    Program öğrenciye, istediği harf notu ile geçebilmesi için finalden minimum kaç puan alması gerektiğini söyler.<br/>
+              Eğer finalden alması gereken puan 100 ün üzerindeyse bu harf notunu almasının imkansız olduğu söylenir.<br/>							
+					    Harf notları sırasıyla A,B,C ve D dir. Bu okulda dönem sonu sınav notu ortalaması<br/> 
+							vizelerin aritmetik ortalamasın %30 u ile final notunun %70 si toplanarak bulunur.<br/>
+							Öğrencinin;<br/> 
+							A ile geçebilmesi için gerekli minimum ortalama 90,<br/>
+							B ile geçebilmesi için gerekli minimum ortalama 70,<br/>
+							C ile geçebilmesi için gerekli minimum ortalama 50,<br/>
+							D ile geçebilmesi için gerekli minimum ortalama 0 dır.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+ <span style="color: #B00040">int</span> vize1, vize2, min_ort;
+ <span style="color: #B00040">char</span> harf_notu;
+ <span style="color: #B00040">float</span> final_notu;
+
+ printf(<span style="color: #BA2121">&quot;Vize1 ve vize2 notlarini giriniz &quot;</span>);
+ scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>vize1,<span style="color: #666666">&amp;</span>vize2);
+ printf(<span style="color: #BA2121">&quot;Almak istediginiz harf notu [A,B,C,D]&quot;</span>);
+ scanf(<span style="color: #BA2121">&quot; %c&quot;</span>,<span style="color: #666666">&amp;</span>harf_notu);
+
+ <span style="color: #008000; font-weight: bold">if</span>(harf_notu <span style="color: #666666">==</span><span style="color: #BA2121">&#39;A&#39;</span>)
+    min_ort <span style="color: #666666">=</span> <span style="color: #666666">90</span>;
+ <span style="color: #008000; font-weight: bold">else</span> <span style="color: #008000; font-weight: bold">if</span> (harf_notu <span style="color: #666666">==</span><span style="color: #BA2121">&#39;B&#39;</span>)
+    min_ort <span style="color: #666666">=</span> <span style="color: #666666">70</span>;
+ <span style="color: #008000; font-weight: bold">else</span> <span style="color: #008000; font-weight: bold">if</span> (harf_notu <span style="color: #666666">==</span><span style="color: #BA2121">&#39;C&#39;</span>)
+    min_ort <span style="color: #666666">=</span> <span style="color: #666666">50</span>;
+ <span style="color: #008000; font-weight: bold">else</span>
+    min_ort <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+
+ final_notu <span style="color: #666666">=</span> (min_ort <span style="color: #666666">-</span> ((vize1<span style="color: #666666">+</span>vize2)<span style="color: #666666">*0.5f</span>)<span style="color: #666666">*0.3f</span>)<span style="color: #666666">/0.7f</span>;
+
+ <span style="color: #008000; font-weight: bold">if</span>(final_notu <span style="color: #666666">&gt;100</span>)
+    printf(<span style="color: #BA2121">&quot;Bu harf notunu almaniz imkansiz&quot;</span>);
+ <span style="color: #008000; font-weight: bold">else</span>
+    printf(<span style="color: #BA2121">&quot;%f almalisiniz&quot;</span>, final_notu);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Vize1 ve vize2 notlarini giriniz 60 70
+Almak istediginiz harf notu [A,B,C,D]A
+Bu harf notunu almaniz imkansiz
+					</pre> 
+				</div>
+			</div>  
+			
+<button class="accordion">24.Üs bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Taban ve kuvvet değerleri girilen bir tamsayının üssünü bulma. </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> taban,kuvvet,i,us<span style="color: #666666">=1</span> ;
+  printf(<span style="color: #BA2121">&quot;Taban ve kuvvet degerlerini giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>taban,<span style="color: #666666">&amp;</span>kuvvet);
+  printf(<span style="color: #BA2121">&quot;%d sayisinin &quot;</span>,taban);
+  <span style="color: #008000; font-weight: bold">for</span>(i<span style="color: #666666">=1</span>; i<span style="color: #666666">&lt;=</span>kuvvet; <span style="color: #666666">++</span>i)
+  {
+      us <span style="color: #666666">*=</span> taban;
+  }
+  printf(<span style="color: #BA2121">&quot;%d&#39;inci kuvveti %d dir&quot;</span>,kuvvet,us);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Taban ve kuvvet degerlerini giriniz 3 5
+3 sayisinin 5'inci kuvveti 243 dir
+					</pre> 
+				</div>
+			</div>  			
+			
+<button class="accordion">25. Belli aralıktaki tek sayılar</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Girilen iki pozitif sayı arasındaki tek sayıları alt alta ekrana yazdıran ve yazma sonunda toplamda kaç tane tek sayı olduğunu bulan program.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+  <span style="color: #B00040">int</span> alt,ust,i,sayac<span style="color: #666666">=0</span>;
+  printf(<span style="color: #BA2121">&quot;Alt ve Ust siniri giriniz &quot;</span>);
+  scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>alt,<span style="color: #666666">&amp;</span>ust);
+  <span style="color: #008000; font-weight: bold">for</span>(i<span style="color: #666666">=</span>alt; i<span style="color: #666666">&lt;=</span>ust; <span style="color: #666666">++</span>i)
+  {
+     <span style="color: #008000; font-weight: bold">if</span>(i<span style="color: #666666">%2</span> <span style="color: #666666">==1</span>)
+     {
+       printf(<span style="color: #BA2121">&quot;%d</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>,i);
+       sayac<span style="color: #666666">++</span>;
+     }
+  }
+  printf(<span style="color: #BA2121">&quot;%d tane tek sayi vardir&quot;</span>,sayac);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Alt ve Ust siniri giriniz 20 40
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+10 tane tek sayi vardir
+					</pre> 
+				</div>
+			</div>  			
+			
+<button class="accordion">26.Faktöriyel Bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Girilen bir tamsayının faktöriyelini bulma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sayi,i;
+   <span style="color: #B00040">long</span> <span style="color: #B00040">long</span> <span style="color: #B00040">int</span> carpim<span style="color: #666666">=1</span>;
+   printf(<span style="color: #BA2121">&quot;Bir sayi giriniz &quot;</span>);
+   scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>sayi);
+   <span style="color: #008000; font-weight: bold">for</span>(i<span style="color: #666666">=2</span>; i<span style="color: #666666">&lt;=</span>sayi; <span style="color: #666666">++</span>i)
+   {
+    carpim <span style="color: #666666">*=</span> i;
+   }
+   printf(<span style="color: #BA2121">&quot;%d nin faktoriyeli %lli dir&quot;</span>,sayi,carpim);
+}
+</pre></div>
+
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Bir sayi giriniz 20
+20 nin faktoriyeli 2432902008176640000 dir
+					</pre> 
+				</div>
+			</div> 	
+			
+<button class="accordion">27.Belli aralıktaki çift sayıların toplamı</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Girilen iki tamsayı değeri arasındaki çift sayıların toplamını ekrana yazdıran program.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sayi1,sayi2,i;
+   <span style="color: #B00040">unsigned</span> <span style="color: #B00040">long</span> toplam<span style="color: #666666">=0</span>;
+   printf(<span style="color: #BA2121">&quot;Kucuk ve Buyuk sayiyi giriniz &quot;</span>);
+   scanf(<span style="color: #BA2121">&quot;%d%d&quot;</span>,<span style="color: #666666">&amp;</span>sayi1,<span style="color: #666666">&amp;</span>sayi2);
+   <span style="color: #008000; font-weight: bold">for</span>(i<span style="color: #666666">=</span>sayi1;i<span style="color: #666666">&lt;=</span>sayi2;<span style="color: #666666">++</span>i)
+   {
+     <span style="color: #008000; font-weight: bold">if</span>(i<span style="color: #666666">%2</span> <span style="color: #666666">==0</span>)
+      toplam <span style="color: #666666">+=</span> i;
+   }
+   printf(<span style="color: #BA2121">&quot;Bu araliktaki cift sayilarin toplami %lu&quot;</span>,toplam);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+Kucuk ve Buyuk sayiyi giriniz 9999 99988
+Bu araliktaki cift sayilarin toplami 2474455030
+					</pre> 
+				</div>
+			</div> 
+
+<button class="accordion">28.Gizli Sayıyı Bulma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> [200,300] aralığında rasgele bir sayı üretilsin. Bu sayının kullanıcı tarafından tahmin edilmesi sağlansın.<br/>
+					Kullanıcıya 5 tahmin hakkı sunulsun. 5 tahminde de bulamazsa program sonlandırılsın. <br/>
+					Kullanıcı gizli sayıdan büyük bir değer girerse daha küçük bir sayı girmesi istensin, <br/>
+					Kullanıcı gizli sayıdan küçük bir sayı girerse daha büyük bir sayı girmesi istensin. <br/>
+					Kullanıcı sayıyı tahmin ederse tebrik edip kaçıncı denemede bildiğini  ekrana yazdırsın.</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;stdlib.h&gt; </span><span style="color: #408080; font-style: italic">//rand , srand</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> gizli_sayi,kullanici_tahmin,tahmin_sayisi<span style="color: #666666">=0</span>;
+   <span style="color: #408080; font-style: italic">//her seferde farkli sayi uretmesini sagla</span>
+   srand(time(<span style="color: #008000">NULL</span>));
+   <span style="color: #408080; font-style: italic">//gizli sayiyi uret [200,300] araliginda</span>
+   gizli_sayi <span style="color: #666666">=</span> rand()<span style="color: #666666">%101</span> <span style="color: #666666">+</span> <span style="color: #666666">200</span>;
+
+   printf(<span style="color: #BA2121">&quot;200 ile 300 arasinda sayi girin &quot;</span>);
+   <span style="color: #008000; font-weight: bold">do</span>{
+       scanf(<span style="color: #BA2121">&quot;%d&quot;</span>,<span style="color: #666666">&amp;</span>kullanici_tahmin);
+       tahmin_sayisi<span style="color: #666666">++</span>;
+       <span style="color: #008000; font-weight: bold">if</span>(kullanici_tahmin<span style="color: #666666">&gt;</span>gizli_sayi)
+        printf(<span style="color: #BA2121">&quot;Daha kucuk sayi girin &quot;</span>);
+       <span style="color: #008000; font-weight: bold">else</span> <span style="color: #008000; font-weight: bold">if</span>(kullanici_tahmin<span style="color: #666666">&lt;</span>gizli_sayi)
+        printf(<span style="color: #BA2121">&quot;Daha buyuk sayi girin &quot;</span>);
+       <span style="color: #008000; font-weight: bold">else</span>
+        printf(<span style="color: #BA2121">&quot;Tebrikler %d. denemede bildiniz&quot;</span>,tahmin_sayisi);
+
+       <span style="color: #008000; font-weight: bold">if</span>(tahmin_sayisi <span style="color: #666666">==5</span>)
+         <span style="color: #008000; font-weight: bold">break</span>;
+   }<span style="color: #008000; font-weight: bold">while</span>(kullanici_tahmin<span style="color: #666666">!=</span>gizli_sayi);
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+200 ile 300 arasinda sayi girin 245
+Daha kucuk sayi girin 235
+Daha kucuk sayi girin 225
+Daha kucuk sayi girin 210
+Daha buyuk sayi girin 218
+Tebrikler 5. denemede bildiniz
+					</pre> 
+				</div>
+			</div> 
+
+<button class="accordion">29.Yıldız Yazdırma</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Anti-diyagonalinde + karakteri diğer yerlerde * karakteri bulunan matris yazdırma</p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sats,suts,n<span style="color: #666666">=7</span>;
+   <span style="color: #008000; font-weight: bold">for</span>(sats<span style="color: #666666">=1</span>;sats<span style="color: #666666">&lt;=</span>n;sats<span style="color: #666666">++</span>)
+   {
+     <span style="color: #008000; font-weight: bold">for</span>(suts<span style="color: #666666">=1</span>;suts<span style="color: #666666">&lt;=</span>n;suts<span style="color: #666666">++</span>)
+     {
+         <span style="color: #008000; font-weight: bold">if</span>(sats<span style="color: #666666">+</span>suts <span style="color: #666666">==</span> n<span style="color: #666666">+1</span>)
+            printf(<span style="color: #BA2121">&quot;+&quot;</span>);
+         <span style="color: #008000; font-weight: bold">else</span>
+            printf(<span style="color: #BA2121">&quot;*&quot;</span>);
+     }
+     printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+   }
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+******+
+*****+*
+****+**
+***+***
+**+****
+*+*****
++******
+					</pre> 
+				</div>
+			</div>  			
+			
+			
+<button class="accordion">30.Matris Hileleri</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Ana diyagonalinin üst kısmı satır ve sütun numarasının çarpımı,  <br />
+					    ana diyagonali ve altı, satır numarasından sütun numarası çıkarılarak oluşturulan matris </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sat_no,sut_no,n<span style="color: #666666">=7</span>;
+   <span style="color: #008000; font-weight: bold">for</span>(sat_no<span style="color: #666666">=1</span>;sat_no<span style="color: #666666">&lt;=</span>n;sat_no<span style="color: #666666">++</span>)
+   {
+     <span style="color: #008000; font-weight: bold">for</span>(sut_no<span style="color: #666666">=1</span>;sut_no<span style="color: #666666">&lt;=</span>n;sut_no<span style="color: #666666">++</span>)
+     {
+         <span style="color: #008000; font-weight: bold">if</span>(sut_no <span style="color: #666666">&gt;</span> sat_no)
+            printf(<span style="color: #BA2121">&quot;%3d&quot;</span>,sut_no<span style="color: #666666">*</span>sat_no);
+         <span style="color: #008000; font-weight: bold">else</span>
+            printf(<span style="color: #BA2121">&quot;%3d&quot;</span>,sat_no<span style="color: #666666">-</span>sut_no);
+     }
+     printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+   }
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 				
+  0  2  3  4  5  6  7
+  1  0  6  8 10 12 14
+  2  1  0 12 15 18 21
+  3  2  1  0 20 24 28
+  4  3  2  1  0 30 35
+  5  4  3  2  1  0 42
+  6  5  4  3  2  1  0
+					</pre> 
+				</div>
+			</div>  	
+
+<button class="accordion">31.Çarpım Tablosu</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> 1 den 9 a kadar rakamların çarpım tablosu </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sat_no,sut_no,n<span style="color: #666666">=9</span>;
+   <span style="color: #008000; font-weight: bold">for</span>(sat_no<span style="color: #666666">=1</span>;sat_no<span style="color: #666666">&lt;=</span>n;sat_no<span style="color: #666666">++</span>)
+   {
+     <span style="color: #008000; font-weight: bold">for</span>(sut_no<span style="color: #666666">=1</span>;sut_no<span style="color: #666666">&lt;=</span>n;sut_no<span style="color: #666666">++</span>)
+     {
+       printf(<span style="color: #BA2121">&quot;%3d&quot;</span>,sut_no<span style="color: #666666">*</span>sat_no);
+     }
+     printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+   }
+}
+</pre></div>
+
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 
+  1  2  3  4  5  6  7  8  9
+  2  4  6  8 10 12 14 16 18
+  3  6  9 12 15 18 21 24 27
+  4  8 12 16 20 24 28 32 36
+  5 10 15 20 25 30 35 40 45
+  6 12 18 24 30 36 42 48 54
+  7 14 21 28 35 42 49 56 63
+  8 16 24 32 40 48 56 64 72
+  9 18 27 36 45 54 63 72 81					
+					</pre> 
+				</div>
+			</div>  
+
+<button class="accordion">32.Yıldızlar</button>
+			<div class="panel">
+				<div class="problem_tanimi">	
+					<h3> Problem Tanımı </h3>				
+					<p> Yıldızlar kullanarak piramit oluşturma </p>
+				</div>
+				<div class="code">
+					<h3> C Kodu </h3>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #BC7A00">#include &lt;stdlib.h&gt; </span><span style="color: #408080; font-style: italic">//rand</span>
+
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+   <span style="color: #B00040">int</span> sat_no,ys,bs,n<span style="color: #666666">=7</span>;
+   <span style="color: #008000; font-weight: bold">for</span>(sat_no<span style="color: #666666">=1</span>;sat_no<span style="color: #666666">&lt;=</span>n;sat_no<span style="color: #666666">++</span>)
+   {
+     <span style="color: #408080; font-style: italic">//bosluk yazdir</span>
+     <span style="color: #008000; font-weight: bold">for</span>(bs<span style="color: #666666">=1</span>;bs<span style="color: #666666">&lt;=</span>n<span style="color: #666666">-</span>sat_no;bs<span style="color: #666666">++</span>)
+     {
+       printf(<span style="color: #BA2121">&quot; &quot;</span>);
+     }
+     <span style="color: #408080; font-style: italic">//yildiz yazdir</span>
+     <span style="color: #008000; font-weight: bold">for</span>(ys<span style="color: #666666">=1</span>;ys<span style="color: #666666">&lt;=2*</span>sat_no<span style="color: #666666">-1</span>;ys<span style="color: #666666">++</span>)
+     {
+       printf(<span style="color: #BA2121">&quot;*&quot;</span>);
+     }
+     <span style="color: #408080; font-style: italic">//ekranda bir alt satira gec</span>
+     printf(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+   }
+}
+</pre></div>
+
+				</div>				
+				<div class="result">
+					<h3> Ekran Çıktısı</h3>
+					<pre> 	
+      *
+     ***
+    *****
+   *******
+  *********
+ ***********
+*************					
+					</pre> 
+				</div>
+			</div>  
+
 			
 <!-- 
-<button class="accordion">4.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
+<button class="accordion">30.Format Belirleyicileri %d, %c, %s, %f, %lf</button>
 			<div class="panel">
 				<div class="problem_tanimi">	
 					<h3> Problem Tanımı </h3>				
@@ -761,8 +1367,8 @@ Kac cocuguvuz var?
 				</div>				
 				<div class="result">
 					<h3> Ekran Çıktısı</h3>
-					<pre> 				
-
+					<pre> 			
+					
 					</pre> 
 				</div>
 			</div>  
@@ -773,7 +1379,7 @@ Kac cocuguvuz var?
 </div>
 
 	<div id="ayak">
-	<h2> Son Güncellenme Tarihi : 10 Kasım 2016 Saat 13:30 </h2>
+	<h2> Son Güncellenme Tarihi : 28 Aralık 2016 Saat 16:30 </h2>
 	</div>
 
 	<!-- Akordeon Menu -->
